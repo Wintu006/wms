@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicio ChatGPT</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <main>
+        <h1>Calculadora</h1>
 
         <div class="calculadora">
             <!--visor da calculadora-->
@@ -40,6 +42,35 @@
         </div>
 
     </main>
-    <script src="calculadora.js"></script>
+    <script>
+
+//funão para adicionar valor ao visor
+function adicionar(valor){
+    document.getElementById('visor').value += valor;
+}
+
+function limpar(valor){
+    document.getElementById('visor').value = '';
+}
+
+function apagar(valor){
+    document.getElementById('visor').value = document.getElementById('visor').value.slice(0, -1);
+}
+
+function calcular(valor){
+    document.getElementById('visor').value = eval(document.getElementById('visor').value);
+}
+
+
+
+
+//-     document.getElementById('visor').value;
+//+     try {
+//+         document.getElementById('visor').value = eval(document.getElementById('visor').value);
+//+     } catch (e) {
+//+         document.getElementById('visor').value = 'Erro';
+//+     }
+
+    </script>
 </body>
 </html>
